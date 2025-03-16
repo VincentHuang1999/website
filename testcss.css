@@ -1,16 +1,16 @@
-/* 让整体适中 */
+/* 让整体适应屏幕，避免超出 */
 .resume-container {
     display: flex;
-    max-width: 1600px;  /* 适当增大 */
-    width: 90%;  /* 让它适应屏幕 */
-    margin: 40px auto;  /* 居中 */
+    max-width: 1200px;  /* 适当减小，适配更多设备 */
+    width: 90%;  
+    margin: 40px auto;  
     background: white;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* 让左侧部分更合理 */
 .sidebar {
-    width: 32%;  /* 让左侧稍微宽一点 */
+    width: 30%;  /* 稍微缩小 */
     background: #ddd;
     padding: 25px;
     text-align: center;
@@ -18,32 +18,61 @@
 
 /* 让右侧内容适应 */
 .content {
-    width: 68%;
+    width: 70%;
     padding: 25px;
 }
 
 /* 让字体更大，提高可读性 */
 body {
-    font-size: 18px;  /* 原本可能是14px，适当调大 */
-    line-height: 1.6;  /* 让行距更舒适 */
+    font-size: 18px;  
+    line-height: 1.6;  
     font-family: "Arial", sans-serif;
     background: #f5f5f5;
 }
 
 /* 让头像变成圆形，固定大小 */
 .profile-img {
-    width: 120px;   /* 固定宽度 */
-    height: 120px;  /* 固定高度 */
-    border-radius: 50%;  /* 变成圆形 */
-    object-fit: cover;  /* 保持比例，填充整个框 */
-    border: 3px solid white;  /* 可选，加个白色边框 */
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2); /* 可选，增加阴影 */
+    width: 120px;   
+    height: 120px;  
+    border-radius: 50%;  
+    object-fit: cover;  
+    border: 3px solid white;  
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* 自我介绍文字居中 */
 .self-intro {
-    text-align: center;  /* 文字居中 */
-    font-size: 18px;  /* 适当加大字体，提高可读性 */
-    font-weight: 500;  /* 让字体稍微加粗 */
-    margin-top: 20px;  /* 增加上方间距 */
-    padding: 10px 20px;  /* 增加内边距，让排版更舒适 */
+    text-align: center;  
+    font-size: 18px;  
+    font-weight: 500;  
+    margin-top: 20px;  
+    padding: 10px 20px;  
+}
+
+/* 📱 添加响应式设计（适配手机） */
+@media (max-width: 768px) {
+    .resume-container {
+        flex-direction: column;  /* 让左右结构变成上下结构 */
+        width: 95%;  /* 让页面填满屏幕 */
+    }
+
+    .sidebar {
+        width: 100%;  /* 让侧边栏占满 */
+        padding: 20px;
+    }
+
+    .content {
+        width: 100%;  /* 让内容区占满 */
+        padding: 20px;
+    }
+
+    .profile-img {
+        width: 100px;  /* 手机上头像稍微缩小 */
+        height: 100px;
+    }
+
+    .self-intro {
+        font-size: 16px;  /* 手机上字体稍微小一点 */
+        margin-top: 10px;
+    }
 }
