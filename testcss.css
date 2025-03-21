@@ -40,9 +40,9 @@ body {
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* 自我介绍文字居中 */
+/* 自我介绍 */
 .self-intro {
-    text-align: center;  
+    text-align: left;  
     font-size: 18px;  
     font-weight: 500;  
     margin-top: 20px;  
